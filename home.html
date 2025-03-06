@@ -243,7 +243,7 @@
             <a href="portfolio.html">_portfolio</a>
             <a href="services.html">_services</a>
             <a href="Resume.pdf">_resume</a>
-            <a href="#">_contact</a>
+            
         </nav>
     </header>
     <div class="container">
@@ -293,16 +293,21 @@
         <p class="description">
             ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
         </p>
-        <form class="contact-form">
-            <label for="name">_name*</label>
-            <input type="text" id="name" required>
-
-            <label for="email">_email*</label>
-            <input type="email" id="email" required>
-
-            <label for="message">_message*</label>
-            <textarea id="message" rows="4" required></textarea>
-
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="c892d0bf-391c-4457-a3ad-d3367b9ca424">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
             <button type="submit">Send</button>
         </form>
     </section>
