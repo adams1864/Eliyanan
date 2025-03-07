@@ -39,6 +39,7 @@
             justify-content: center;
             align-items: center;
             height: 80vh;
+            position: relative;
         }
         h1 {
             font-size: 50px;
@@ -232,13 +233,57 @@
             text-decoration: none;
             font-size: 18px;
         }
+        .floating-icons {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .floating-icons i {
+            font-size: 2rem;
+            color: #00bfff;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .rotating-icons {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .rotating-icons i {
+            font-size: 2rem;
+            color: #d4af37;
+            animation: rotate 4s linear infinite;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <span>Eliyanan <span style="color:#9370DB;">web_dev</span></span>
         <nav>
-            <a href="index.html">_home</a>
+            <a href="home.html">_home</a>
             <a href="about.html">_about</a>
             <a href="portfolio.html">_portfolio</a>
             <a href="services.html">_services</a>
@@ -247,6 +292,18 @@
         </nav>
     </header>
     <div class="container">
+        <div class="floating-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-node-js"></i>
+        </div>
+        <div class="rotating-icons">
+            <i class="fab fa-java"></i>
+            <i class="fab fa-node-js"></i>
+            <i class="fab fa-php"></i>
+            <i class="fab fa-python"></i>
+        </div>
         <div class="hero">
             <p>// HI, I'M Eliyanan, A...</p>
             <div class="title">{" _Web Developer "}</div>
@@ -255,22 +312,24 @@
     </div>
     <div class="about-container">
         <h1 class="about-title">&lt;about_me&gt;</h1>
-        <p class="about-subtitle">...lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <p class="about-subtitle">...Passionate about creating interactive and user-friendly web applications...</p>
         <div class="about-content">
             <div class="about-left">
-                <p>...I have over 12 years of experience in web development, with a strong background in both front-end and back-end technologies;</p>
+                <p>...I have spent  years learning  web development, with a strong background in  
+                 back-end technologies;</p>
             </div>
             <div class="about-right">
-                <p>...Curabitur sit amet luctus tortor, sit amet ultrices ante. Maecenas convallis dui arcu, et tempor felis consectetur vel...</p>
+                <p>...I specialize in developing robust and scalable back-end systems using technologies like Node.js, Express, and MongoDB. My focus is on creating efficient APIs, managing databases, and ensuring server-side performance and security...</p>
             </div>
         </div>
-        <a href="#" class="about-button">{read_more}</a>
+       <br>
+       <br>
     </div>
     <div class="portfolio">
         <div class="portfolio-item">
             <a href="https://github.com/adams1864/Express_starter_file/tree/main">
                 <img src="images/Screenshot 2024-11-01 191258.png" alt="MERN Backend Starter">
-                <p class="text">//MERN Backend Starter</p>
+                <p class="text">//MERN Backend Starter File</p>
             </a>
         </div>
         <div class="portfolio-item">
@@ -291,7 +350,7 @@
         <h2 class="title">{✣}</h2>
         <h1 class="contact-title">&lt;contact_me&gt;</h1>
         <p class="description">
-            ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+            ...Let's Chat! I'm here to help you with your project..
         </p>
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <input type="hidden" name="access_key" value="c892d0bf-391c-4457-a3ad-d3367b9ca424">
