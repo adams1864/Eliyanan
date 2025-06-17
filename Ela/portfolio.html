@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'VT323', monospace;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: left;
+      padding: 20px;
+      font-size: 20px;
+      color: #fff;
+    }
+    nav {
+      text-align: right;
+      padding-right: 30px;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      position: relative;
+    }
+    h1 {
+      font-size: 50px;
+      color: #00bfff;
+    }
+    .highlight {
+      color: #d4af37;
+      font-size: 24px;
+    }
+    .text-content {
+      max-width: 800px;
+      font-size: 18px;
+      color: #b0b0b0;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px;
+    }
+    .hero p {
+      font-size: 24px;
+      color: #d4af37;
+      font-family: 'Poppins', sans-serif;
+    }
+    .title {
+      font-size: 50px;
+      color: #00bfff;
+      font-family: 'Poppins', sans-serif;
+      white-space: pre;
+    }
+    .arrow {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 50px;
+      background-color: #1a1a1a;
+      position: relative;
+    }
+    .portfolio-item {
+      background-color: #333;
+      padding: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+    .portfolio-item .text {
+      font-size: 1.2em;
+      color: #f0e68c;
+      margin-top: 10px;
+      z-index: 1;
+    }
+    .portfolio-item a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .contact-container {
+      width: 60%;
+      margin: auto;
+      padding: 50px 0;
+    }
+    .contact-container .title {
+      color: #7acbff;
+      font-size: 18px;
+    }
+    .contact-container .contact-title {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+    .contact-container .description {
+      color: #e6c744;
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-form label {
+      font-size: 14px;
+      color: #bbb;
+      align-self: flex-start;
+      width: 80%;
+      margin-bottom: 5px;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+      width: 80%;
+      background: none;
+      border: 1px solid #444;
+      padding: 10px;
+      color: #f5f5f5;
+      font-size: 14px;
+      font-family: 'Press Start 2P', cursive;
+      outline: none;
+      margin-bottom: 15px;
+    }
+    .contact-form button {
+      background: #1e90ff;
+      border: none;
+      padding: 10px 15px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+      text-transform: uppercase;
+    }
+    .contact-form button:hover {
+      background: #0072e3;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: #d4af37;
+      font-family: 'VT323', monospace;
+      font-size: 24px;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    footer .left, footer .right {
+      margin: 0 20px;
+    }
+    footer .center {
+      display: flex;
+      gap: 10px;
+    }
+    footer .center a {
+      color: #d4af37;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .floating-icons {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .floating-icons i {
+      font-size: 2rem;
+      color: #00bfff;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    .animated-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #00bfff, #d4af37, #00bfff, #d4af37);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      z-index: -1;
+      opacity: 0.2;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .skills-cloud {
+      width: 80%;
+      margin: 50px auto;
+      text-align: center;
+      color: #fff;
+    }
+    .skills-cloud h2 {
+      font-size: 32px;
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+    .skills-cloud .skill {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #333;
+      border-radius: 20px;
+      font-size: 1.2em;
+      color: #f0e68c;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .skills-cloud .skill:hover {
+      background-color: #00bfff;
+      transform: scale(1.1);
+    }
+    .fun-facts {
+      width: 80%;
+      margin: 50px auto;
+      text-align: center;
+      color: #fff;
+    }
+    .fun-facts h2 {
+      font-size: 32px;
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+    .fun-facts .fact {
+      display: inline-block;
+      margin: 10px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      font-size: 1.2em;
+      color: #f0e68c;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .fun-facts .fact:hover {
+      background-color: #00bfff;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span>Eliyanan <span style="color:#9370DB;">web_dev</span></span>
+    <nav>
+      <a href="index.html">_home</a>
+      <a href="about.html">_about</a>
+      <a href="portfolio.html">_portfolio</a>
+      <a href="services.html">_services</a>
+      <a href="Resume.pdf">_resume</a>
+     
+    </nav>
+  </header>
+  <div class="container">
+    <div class="animated-background"></div>
+    <div class="floating-icons">
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-js"></i>
+      <i class="fab fa-node-js"></i>
+    </div>
+    <h1>{" Portfolio"}</h1>
+    <p class="highlight">...I have spent  years  in web development, with a strong background in back-end technologies.</p>
+    <p class="text-content">Throughout my career, I have worked on a variety of projects that showcase my skills in web development. From creating dynamic and responsive websites to developing robust APIs and managing databases, I have consistently delivered high-quality solutions that meet client needs. My portfolio highlights some of the key projects I have worked on, demonstrating my ability to tackle complex challenges and deliver exceptional results.</p>
+  </div>
+  <div class="portfolio">
+    <div class="portfolio-item">
+      <a href="https://github.com/adams1864/Express_starter_file/tree/main">
+        <img src="images/Screenshot 2024-11-01 191258.png" alt="MERN Backend Starter">
+        <p class="text">//MERN Backend Starter</p>
+      </a>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://github.com/adams1864/rental-system/tree/main">
+        <img src="images/image.png" alt="ደበበ ደላላው">
+        <p class="text">// ደበበ ደላላው</p>
+      </a>
+    </div>
+    <!-- Add more portfolio items as needed -->
+    <div class="portfolio-item">
+      <a href="https://adams1864.github.io/phpproj/">
+        <img src="images/Screenshot 2025-02-16 234150.png" alt="Balageru">
+        <p class="text">// Balageru</p>
+      </a>
+    </div>
+    <div class="portfolio-item">
+      <a href="https://github.com/adams1864/blog4zteam/tree/main">
+        <img src="images/blog.png" alt="Blog">
+        <p class="text">// Blog Page</p>
+      </a>
+    </div>
+     <div class="portfolio-item">
+      <a href="https://github.com/adams1864/DIY-Project-Instruction-Platform">
+        <p class="text">// DIY Instruction Platform</p>
+      </a>
+    </div>
+  </div>
+  <div class="fun-facts">
+    <h2>Fun Facts</h2>
+    <div class="fact">I have can learn anything new.</div>
+    <div class="fact">I am fluent in 4 programming languages.</div>
+    <div class="fact">I have a passion for learning new technologies.</div>
+    <div class="fact">I enjoy building projects.</div>
+  </div>
+  <div class="contact-container">
+    <h2 class="title">{✣}</h2>
+    <h1 class="contact-title">&lt;contact_me&gt;</h1>
+    <p class="description">
+      ...Let's Chat! I'm here to help you with your project.
+    </p>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <input type="hidden" name="access_key" value="c892d0bf-391c-4457-a3ad-d3367b9ca424">
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+      <button type="submit">Send</button>
+  </form>
+  </div>
+  <footer>
+    <div class="left">
+      <a href="home.html">_home</a>
+      <a href="about.html">_about</a>
+      <a href="services.html">_services</a>
+      <a href="Resume.pdf">_resume</a>
+    </div>
+    <div class="center">
+      <a href="https://t.me/Terminaltroll"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://www.instagram.com/eliyanan52/"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:adamsvillage326@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="right">
+      Copyright @ 2025 Web Developer Portfolio
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
