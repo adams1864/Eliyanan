@@ -80,6 +80,7 @@
       padding: 50px;
       background-color: #1a1a1a;
       position: relative;
+      justify-content: center; /* Add this line */
     }
     .portfolio-item {
       background-color: #333;
@@ -286,6 +287,40 @@
       background-color: #00bfff;
       transform: scale(1.1);
     }
+    #filter-buttons {
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      background: #1e90ff;
+      border: none;
+      padding: 8px 12px;
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+      text-transform: uppercase;
+      margin: 0 5px;
+    }
+
+    .filter-btn.active {
+      background: #0072e3;
+    }
+
+    .portfolio-item, .fun-facts, .contact-container {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .portfolio-item.visible, .fun-facts.visible, .contact-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -312,33 +347,38 @@
     <p class="highlight">...I have spent  years  in web development, with a strong background in back-end technologies.</p>
     <p class="text-content">Throughout my career, I have worked on a variety of projects that showcase my skills in web development. From creating dynamic and responsive websites to developing robust APIs and managing databases, I have consistently delivered high-quality solutions that meet client needs. My portfolio highlights some of the key projects I have worked on, demonstrating my ability to tackle complex challenges and deliver exceptional results.</p>
   </div>
+  <div id="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
+    <button class="filter-btn" data-filter="full-stack">Full-Stack</button>
+  </div>
   <div class="portfolio">
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="backend">
       <a href="https://github.com/adams1864/Express_starter_file/tree/main">
         <img src="images/Screenshot 2024-11-01 191258.png" alt="MERN Backend Starter">
         <p class="text">//MERN Backend Starter</p>
       </a>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="full-stack">
       <a href="https://github.com/adams1864/rental-system/tree/main">
         <img src="images/image.png" alt="ደበበ ደላላው">
         <p class="text">// ደበበ ደላላው</p>
       </a>
     </div>
     <!-- Add more portfolio items as needed -->
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="full-stack">
       <a href="https://adams1864.github.io/phpproj/">
         <img src="images/Screenshot 2025-02-16 234150.png" alt="Balageru">
         <p class="text">// Balageru</p>
       </a>
     </div>
-    <div class="portfolio-item">
+    <div class="portfolio-item" data-category="full-stack">
       <a href="https://github.com/adams1864/blog4zteam/tree/main">
         <img src="images/blog.png" alt="Blog">
         <p class="text">// Blog Page</p>
       </a>
     </div>
-     <div class="portfolio-item">
+     <div class="portfolio-item" data-category="full-stack">
       <a href="https://github.com/adams1864/DIY-Project-Instruction-Platform">
         <p class="text">// DIY Instruction Platform</p>
       </a>
