@@ -3,434 +3,313 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
-      font-family: 'VT323', monospace;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: left;
-      padding: 20px;
-      font-size: 20px;
-      color: #fff;
-    }
-    nav {
-      text-align: right;
-      padding-right: 30px;
-    }
-    nav a {
-      color: #d4af37;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 18px;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 80vh;
-      position: relative;
-    }
-    h1 {
-      font-size: 50px;
-      color: #00bfff;
-    }
-    .highlight {
-      color: #d4af37;
-      font-size: 24px;
-    }
-    .text-content {
-      max-width: 800px;
-      font-size: 18px;
-      color: #b0b0b0;
-    }
-    .hero {
-      text-align: center;
-      padding: 50px;
-    }
-    .hero p {
-      font-size: 24px;
-      color: #d4af37;
-      font-family: 'Poppins', sans-serif;
-    }
-    .title {
-      font-size: 50px;
-      color: #00bfff;
-      font-family: 'Poppins', sans-serif;
-      white-space: pre;
-    }
-    .arrow {
-      font-size: 20px;
-      margin-top: 20px;
-    }
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 50px;
-      background-color: #1a1a1a;
-      position: relative;
-      justify-content: center; /* Add this line */
-    }
-    .portfolio-item {
-      background-color: #333;
-      padding: 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .portfolio-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    }
-    .portfolio-item img {
-      max-width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
-    .portfolio-item:hover img {
-      transform: scale(1.1);
-    }
-    .portfolio-item .text {
-      font-size: 1.2em;
-      color: #f0e68c;
-      margin-top: 10px;
-      z-index: 1;
-    }
-    .portfolio-item a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .contact-container {
-      width: 60%;
-      margin: auto;
-      padding: 50px 0;
-    }
-    .contact-container .title {
-      color: #7acbff;
-      font-size: 18px;
-    }
-    .contact-container .contact-title {
-      font-size: 32px;
-      margin: 10px 0;
-    }
-    .contact-container .description {
-      color: #e6c744;
-      font-size: 12px;
-      margin-bottom: 30px;
-    }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .contact-form label {
-      font-size: 14px;
-      color: #bbb;
-      align-self: flex-start;
-      width: 80%;
-      margin-bottom: 5px;
-    }
-    .contact-form input, 
-    .contact-form textarea {
-      width: 80%;
-      background: none;
-      border: 1px solid #444;
-      padding: 10px;
-      color: #f5f5f5;
-      font-size: 14px;
-      font-family: 'Press Start 2P', cursive;
-      outline: none;
-      margin-bottom: 15px;
-    }
-    .contact-form button {
-      background: #1e90ff;
-      border: none;
-      padding: 10px 15px;
-      color: #fff;
-      font-size: 14px;
-      cursor: pointer;
-      font-family: 'Press Start 2P', cursive;
-      text-transform: uppercase;
-    }
-    .contact-form button:hover {
-      background: #0072e3;
-    }
-    footer {
-      background-color: #1a1a1a;
-      color: #d4af37;
-      font-family: 'VT323', monospace;
-      font-size: 24px;
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    footer .left, footer .right {
-      margin: 0 20px;
-    }
-    footer .center {
-      display: flex;
-      gap: 10px;
-    }
-    footer .center a {
-      color: #d4af37;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .floating-icons {
-      position: absolute;
-      top: 50%;
-      left: 10%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .floating-icons i {
-      font-size: 2rem;
-      color: #00bfff;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-    }
-    .animated-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #00bfff, #d4af37, #00bfff, #d4af37);
-      background-size: 400% 400%;
-      animation: gradientAnimation 15s ease infinite;
-      z-index: -1;
-      opacity: 0.2;
-    }
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .skills-cloud {
-      width: 80%;
-      margin: 50px auto;
-      text-align: center;
-      color: #fff;
-    }
-    .skills-cloud h2 {
-      font-size: 32px;
-      color: #00bfff;
-      margin-bottom: 20px;
-    }
-    .skills-cloud .skill {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #333;
-      border-radius: 20px;
-      font-size: 1.2em;
-      color: #f0e68c;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-    .skills-cloud .skill:hover {
-      background-color: #00bfff;
-      transform: scale(1.1);
-    }
-    .fun-facts {
-      width: 80%;
-      margin: 50px auto;
-      text-align: center;
-      color: #fff;
-    }
-    .fun-facts h2 {
-      font-size: 32px;
-      color: #00bfff;
-      margin-bottom: 20px;
-    }
-    .fun-facts .fact {
-      display: inline-block;
-      margin: 10px;
-      padding: 20px;
-      background-color: #333;
-      border-radius: 10px;
-      font-size: 1.2em;
-      color: #f0e68c;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-    .fun-facts .fact:hover {
-      background-color: #00bfff;
-      transform: scale(1.1);
-    }
-    #filter-buttons {
-      margin-bottom: 20px;
-    }
-
-    .filter-btn {
-      background: #1e90ff;
-      border: none;
-      padding: 8px 12px;
-      color: #fff;
-      font-size: 12px;
-      cursor: pointer;
-      font-family: 'Press Start 2P', cursive;
-      text-transform: uppercase;
-      margin: 0 5px;
-    }
-
-    .filter-btn.active {
-      background: #0072e3;
-    }
-
-    .portfolio-item, .fun-facts, .contact-container {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .portfolio-item.visible, .fun-facts.visible, .contact-container.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
+  <title>Projects · Eliyanan Belay</title>
+  <meta name="description" content="Explore Eliyanan Belay’s recent back-end, fullstack, and accessibility projects that ship reliable experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIWXBJd7wa9u0J8XWZikc2xkG4ZkT2Jrj3zyb1Mc3E2mQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/image.png">
 </head>
 <body>
   <header>
-    <span>Eliyanan <span style="color:#9370DB;">web_dev</span></span>
-    <nav>
-      <a href="index.html">_home</a>
-      <a href="about.html">_about</a>
-      <a href="portfolio.html">_portfolio</a>
-      <a href="services.html">_services</a>
-      <a href="Resume.pdf">_resume</a>
-     
-    </nav>
+    <div class="container">
+      <nav>
+        <a class="logo" href="index.html" aria-label="Eliyanan Belay home">
+          <img src="images/chatgpt-logo.png" alt="Eliyanan Belay logo">
+          <span>Eliyanan Belay</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="origin.html">Origin</a></li>
+          <li><a class="active" href="portfolio.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn-secondary" href="Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="fas fa-circle-half-stroke"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
   </header>
-  <div class="container">
-    <div class="animated-background"></div>
-    <div class="floating-icons">
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
-      <i class="fab fa-node-js"></i>
-    </div>
-    <h1>{" Portfolio"}</h1>
-    <p class="highlight">...I have spent  years  in web development, with a strong background in back-end technologies.</p>
-    <p class="text-content">Throughout my career, I have worked on a variety of projects that showcase my skills in web development. From creating dynamic and responsive websites to developing robust APIs and managing databases, I have consistently delivered high-quality solutions that meet client needs. My portfolio highlights some of the key projects I have worked on, demonstrating my ability to tackle complex challenges and deliver exceptional results.</p>
-  </div>
-  <div id="filter-buttons">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="backend">Backend</button>
-    <button class="filter-btn" data-filter="full-stack">Full-Stack</button>
-  </div>
-  <div class="portfolio">
-    <div class="portfolio-item" data-category="backend">
-      <a href="https://github.com/adams1864/Express_starter_file/tree/main">
-        <img src="images/Screenshot 2024-11-01 191258.png" alt="MERN Backend Starter">
-        <p class="text">//MERN Backend Starter</p>
-      </a>
-    </div>
-    <div class="portfolio-item" data-category="full-stack">
-      <a href="https://github.com/adams1864/rental-system/tree/main">
-        <img src="images/image.png" alt="ደበበ ደላላው">
-        <p class="text">// ደበበ ደላላው</p>
-      </a>
-    </div>
-    <!-- Add more portfolio items as needed -->
-    <div class="portfolio-item" data-category="full-stack">
-      <a href="https://adams1864.github.io/phpproj/">
-        <img src="images/Screenshot 2025-02-16 234150.png" alt="Balageru">
-        <p class="text">// Balageru</p>
-      </a>
-    </div>
-    <div class="portfolio-item" data-category="full-stack">
-      <a href="https://github.com/adams1864/blog4zteam/tree/main">
-        <img src="images/blog.png" alt="Blog">
-        <p class="text">// Blog Page</p>
-      </a>
-    </div>
-     <div class="portfolio-item" data-category="full-stack">
-      <a href="https://github.com/adams1864/DIY-Project-Instruction-Platform">
-        <p class="text">// DIY Instruction Platform</p>
-      </a>
-    </div>
-  </div>
-  <div class="fun-facts">
-    <h2>Fun Facts</h2>
-    <div class="fact">I have can learn anything new.</div>
-    <div class="fact">I am fluent in 4 programming languages.</div>
-    <div class="fact">I have a passion for learning new technologies.</div>
-    <div class="fact">I enjoy building projects.</div>
-  </div>
-  <div class="contact-container">
-    <h2 class="title">{✣}</h2>
-    <h1 class="contact-title">&lt;contact_me&gt;</h1>
-    <p class="description">
-      ...Let's Chat! I'm here to help you with your project.
-    </p>
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-      <input type="hidden" name="access_key" value="c892d0bf-391c-4457-a3ad-d3367b9ca424">
-      
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-      
-      <button type="submit">Send</button>
-  </form>
-  </div>
+  <main>
+    <section>
+      <div class="container hero">
+        <div class="hero-copy">
+          <div class="hero-meta">
+            <span><i class="fas fa-diagram-project"></i> 5 flagship builds</span>
+            <span><i class="fas fa-clock"></i> Delivered within tight launch timelines</span>
+          </div>
+          <h1 class="hero-title">Projects engineered to be <span>reliable, observable,</span> and ready for scale.</h1>
+          <p class="hero-description">From fintech audit trails to multilingual commerce experiences, each project demonstrates my ability to align stakeholders, select the right tools, and deploy confidently.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#portfolio-list">
+              <i class="fas fa-arrow-down"></i>
+              <span>Browse projects</span>
+            </a>
+            <a class="btn-secondary" href="index.html#contact">
+              <i class="fas fa-handshake"></i>
+              <span>Book a discovery call</span>
+            </a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h2>How I evaluate a project</h2>
+          <ul class="bullet-list">
+            <li>What does success look like for the team and the end user?</li>
+            <li>How do we model data, secure it, and observe it in production?</li>
+            <li>What automation unblocks operations and keeps quality high?</li>
+            <li>How can we make the experience inclusive from day one?</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="portfolio-list">
+      <div class="container">
+        <div class="section-heading">Showcase</div>
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-subtitle">Browse the engagements that combine automation, observability, and inclusive delivery—no UI mockups required.</p>
+        <div id="filter-buttons" class="filter-group">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="backend">Back-End</button>
+          <button class="filter-btn" type="button" data-filter="fullstack">Fullstack</button>
+          <button class="filter-btn" type="button" data-filter="accessibility">Accessibility</button>
+        </div>
+        <div class="portfolio-grid">
+          <article class="project-entry portfolio-item" data-category="backend">
+            <header class="project-entry__header">
+              <div class="project-entry__title">
+                <span class="project-label">Back-End</span>
+                <h3 class="project-title">Nexus Job Intelligence Scraper</h3>
+              </div>
+              <div class="project-meta">
+                <span><i class="fas fa-calendar"></i> 2024</span>
+                <span><i class="fas fa-briefcase"></i> Nexus Technology</span>
+              </div>
+            </header>
+            <p class="project-summary">High-volume harvesting engine that keeps analysts supplied with deduplicated vacancy data and trend-ready exports.</p>
+            <ul class="project-insights">
+              <li>Scaled to 12K+ listings per week using rotating proxies, checkpoints, and idempotent replays.</li>
+              <li>Normalization rules map 40+ source schemas into a single search index within seconds.</li>
+              <li>Grafana dashboards alert on schema drift and failure spikes in under five minutes.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Node.js</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Automation</span>
+            </div>
+          </article>
+          <article class="project-entry portfolio-item" data-category="backend">
+            <header class="project-entry__header">
+              <div class="project-entry__title">
+                <span class="project-label">Back-End</span>
+                <h3 class="project-title">Chapa Payment Audit Pipeline</h3>
+              </div>
+              <div class="project-meta">
+                <span><i class="fas fa-calendar"></i> 2024</span>
+                <span><i class="fas fa-lock"></i> Fintech Automation</span>
+              </div>
+            </header>
+            <p class="project-summary">A webhook-first ledger that records every Chapa event, signs payloads, and reconciles settlements automatically.</p>
+            <ul class="project-insights">
+              <li>Captured 100% of payment lifecycle events with retry-safe ingestion and replay tooling.</li>
+              <li>Constructed dispute evidence packs containing signed payloads, metadata, and replay tokens.</li>
+              <li>Triggered anomaly alerts for delayed settlements, cutting manual checks by 70%.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Express.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Webhooks</span>
+              <span class="tag">Audit</span>
+            </div>
+          </article>
+          <article class="project-entry portfolio-item" data-category="fullstack">
+            <header class="project-entry__header">
+              <div class="project-entry__title">
+                <span class="project-label">Fullstack</span>
+                <h3 class="project-title">Brothers IT Product Catalog</h3>
+              </div>
+              <div class="project-meta">
+                <span><i class="fas fa-calendar"></i> 2024</span>
+                <span><i class="fas fa-people-group"></i> Brothers IT Plc</span>
+              </div>
+            </header>
+            <p class="project-summary">Multilingual commerce platform with semantic search, role-based dashboards, and containerized deployment.</p>
+            <ul class="project-insights">
+              <li>Delivered RBAC-secured storefronts and headless APIs serving sales, inventory, and support squads.</li>
+              <li>Embedded vector search so buyers can find SKUs via product intent, not exact keywords.</li>
+              <li>Automated build-and-release with Docker compose and GitHub Actions for weekly drops.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Go</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Docker</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </article>
+          <article class="project-entry portfolio-item hidden" data-category="fullstack">
+            <header class="project-entry__header">
+              <div class="project-entry__title">
+                <span class="project-label">Fullstack</span>
+                <h3 class="project-title">DIY Instruction Platform</h3>
+              </div>
+              <div class="project-meta">
+                <span><i class="fas fa-calendar"></i> 2025</span>
+                <span><i class="fas fa-book"></i> Personal Project</span>
+              </div>
+            </header>
+            <p class="project-summary">Content platform for publishing moderated, long-form DIY tutorials with reusable components and tagging.</p>
+            <ul class="project-insights">
+              <li>Moderation workflow with states for draft, review, publish, and archival to keep guides evergreen.</li>
+              <li>Search endpoints expose topic, tool, and skill filters powering future mobile clients.</li>
+              <li>CI suite runs contract tests to guarantee editorial tooling stays in sync with the REST API.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Django</span>
+              <span class="tag">REST API</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Testing</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/adams1864/DIY-Project-Instruction-Platform" target="_blank" rel="noopener">
+                View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+          <article class="project-entry portfolio-item hidden" data-category="accessibility">
+            <header class="project-entry__header">
+              <div class="project-entry__title">
+                <span class="project-label">Accessibility</span>
+                <h3 class="project-title">EthSL Learning Translator</h3>
+              </div>
+              <div class="project-meta">
+                <span><i class="fas fa-calendar"></i> 2025 – Present</span>
+                <span><i class="fas fa-universal-access"></i> Accessibility Lab</span>
+              </div>
+            </header>
+            <p class="project-summary">Pipeline that converts STEM PDFs into glossified EthSL/ASL learning modules with educator feedback loops.</p>
+            <ul class="project-insights">
+              <li>Extracted text, formulas, and diagrams into structured lessons ready for interpreter review.</li>
+              <li>Linked curriculum units to sign-language video assets while keeping latency under 300ms.</li>
+              <li>Planned API surface for mobile teams to embed lessons into offline-first classroom tools.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Accessibility</span>
+            </div>
+          </article>
+        </div>
+        <div class="hero-actions" style="margin-top: 2rem;">
+          <button id="show-more" class="btn-secondary" type="button">
+            <i class="fas fa-plus"></i>
+            <span>Show more projects</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">Deep dives</div>
+        <h2 class="section-title">Behind the build</h2>
+        <p class="section-subtitle">A glimpse into the challenges and decisions that shaped a few favorites.</p>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role">Resilient scraping</div>
+                <div class="timeline-meta">Nexus Technology</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Introduced rotating proxies, exponential backoff, and checkpointing to survive anti-bot measures.</li>
+                <li>Designed a normalization pipeline that maps disjoint schemas into a unified search index.</li>
+                <li>Instrumented the pipeline with custom metrics to alert on schema drift within minutes.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role">Payment observability</div>
+                <div class="timeline-meta">Fintech Automation</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Stored signed payloads and replay tokens to debug payment disputes without involving engineers.</li>
+                <li>Mapped Chapa’s webhook events to internal ledgers, syncing metadata with downstream analytics.</li>
+                <li>Automated Slack alerts for settlement anomalies, reducing manual checks by 70%.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role">Inclusive learning</div>
+                <div class="timeline-meta">EthSL Translator</div>
+              </div>
+              <ul class="bullet-list">
+                <li>Partnered with interpreters to validate gloss conversion and video timing accuracy.</li>
+                <li>Designed storage that links lessons to EthSL/ASL assets while keeping performance snappy.</li>
+                <li>Opened API endpoints for future mobile clients focused on deaf student accessibility.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-container">
+        <div class="contact-details">
+          <div class="section-heading">Next project</div>
+          <h2 class="section-title">Need similar results?</h2>
+          <p class="section-subtitle">Tell me about the problem you’re solving, and I’ll suggest a plan to deliver it fast without sacrificing quality.</p>
+          <ul class="contact-list">
+            <li><i class="fas fa-phone"></i> <a href="tel:+251915998576">+251 915 998 576</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:adamsvillage326@gmail.com">adamsvillage326@gmail.com</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:adamsvillage326@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="c892d0bf-391c-4457-a3ad-d3367b9ca424">
+          <label for="portfolio-name">Name</label>
+          <input id="portfolio-name" name="name" type="text" placeholder="Your name" required>
+          <label for="portfolio-email">Email</label>
+          <input id="portfolio-email" name="email" type="email" placeholder="you@example.com" required>
+          <label for="portfolio-message">Project details</label>
+          <textarea id="portfolio-message" name="message" placeholder="Tell me about your product" required></textarea>
+          <button class="btn" type="submit">Request a roadmap</button>
+        </form>
+      </div>
+    </section>
+  </main>
   <footer>
-    <div class="left">
-      <a href="home.html">_home</a>
-      <a href="about.html">_about</a>
-      <a href="services.html">_services</a>
-      <a href="Resume.pdf">_resume</a>
-    </div>
-    <div class="center">
-      <a href="https://t.me/Terminaltroll"><i class="fab fa-telegram-plane"></i></a>
-      <a href="https://www.instagram.com/eliyanan52/"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:adamsvillage326@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="right">
-      Copyright @ 2025 Web Developer Portfolio
+    <div class="container">
+      <p>© <span id="portfolio-year"></span> Eliyanan Belay. Building the infrastructure that ideas deserve.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="origin.html">Origin</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('portfolio-year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>

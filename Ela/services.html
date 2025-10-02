@@ -3,313 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
-      font-family: 'VT323', monospace;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: left;
-      padding: 20px;
-      font-size: 20px;
-      color: #fff;
-      background-color: #1a1a1a;
-    }
-    nav {
-      text-align: right;
-      padding-right: 30px;
-    }
-    nav a {
-      color: #d4af37;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 18px;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 50px;
-      color: #00bfff;
-    }
-    .highlight {
-      color: #d4af37;
-      font-size: 24px;
-    }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .service-box {
-      background-color: #222;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      width: 300px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-    .service-box:hover {
-      transform: scale(1.05);
-    }
-    .service-box h2 {
-      font-size: 1.8rem;
-      color: #fff;
-    }
-    .service-box p {
-      font-size: 1rem;
-      color: #b0b0b0;
-    }
-    .contact-container {
-      width: 60%;
-      margin: auto;
-      padding: 50px 0;
-      text-align: center; /* Center the content */
-    }
-    .contact-container .title {
-      color: #7acbff;
-      font-size: 18px;
-      display: inline-block; /* Ensure the title is centered */
-    }
-    .contact-container .contact-title {
-      font-size: 32px;
-      margin: 10px 0;
-    }
-    .contact-container .description {
-      color: #e6c744;
-      font-size: 12px;
-      margin-bottom: 30px;
-    }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .contact-form label {
-      font-size: 14px;
-      color: #bbb;
-      align-self: flex-start;
-      width: 80%;
-      margin-bottom: 5px;
-    }
-    .contact-form input, 
-    .contact-form textarea {
-      width: 80%;
-      background: none;
-      border: 1px solid #444;
-      padding: 10px;
-      color: #f5f5f5;
-      font-size: 14px;
-      font-family: 'Press Start 2P', cursive;
-      outline: none;
-      margin-bottom: 15px;
-    }
-    .contact-form button {
-      background: #1e90ff;
-      border: none;
-      padding: 10px 15px;
-      color: #fff;
-      font-size: 14px;
-      cursor: pointer;
-      font-family: 'Press Start 2P', cursive;
-      text-transform: uppercase;
-    }
-    .contact-form button:hover {
-      background: #0072e3;
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-      padding: 50px;
-      background-color: #1a1a1a;
-    }
-    .skill-box {
-      background-color: #333;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-width: 150px;
-      position: relative;
-      overflow: hidden;
-    }
-    .skill-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    }
-    .skill-box i {
-      font-size: 2rem;
-      color: #00bfff;
-      margin-bottom: 10px;
-      transition: transform 0.3s;
-    }
-    .skill-box:hover i {
-      transform: scale(1.1);
-    }
-    .skill-box p {
-      font-size: 1rem;
-      color: #f0e68c;
-      margin-top: 10px;
-      z-index: 1;
-    }
-    footer {
-      background-color: #1a1a1a;
-      color: #d4af37;
-      font-family: 'VT323', monospace;
-      font-size: 24px;
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    footer .left, footer .right {
-      margin: 0 20px;
-    }
-    footer .center {
-      display: flex;
-      gap: 10px;
-    }
-    footer .center a {
-      color: #d4af37;
-      text-decoration: none;
-      font-size: 18px;
-    }
-  </style>
+  <title>Services · Eliyanan Belay</title>
+  <meta name="description" content="Service offerings from Eliyanan Belay, including back-end engineering, payments integration, data automation, and accessibility consulting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIWXBJd7wa9u0J8XWZikc2xkG4ZkT2Jrj3zyb1Mc3E2mQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/image.png">
 </head>
 <body>
   <header>
-    <span>Eliyanan <span style="color:#9370DB;">web_dev</span></span>
-    <nav>
-      <a href="index.html">_home</a>
-      <a href="about.html">_about</a>
-      <a href="portfolio.html">_portfolio</a>
-      <a href="services.html">_services</a>
-      <a href="Resume.pdf">_resume</a>
-      
-    </nav>
+    <div class="container">
+      <nav>
+        <a class="logo" href="index.html" aria-label="Eliyanan Belay home">
+          <img src="images/chatgpt-logo.png" alt="Eliyanan Belay logo">
+          <span>Eliyanan Belay</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="origin.html">Origin</a></li>
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn-secondary" href="Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="fas fa-circle-half-stroke"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
   </header>
-  <div class="container">
-    <h1>{" Services "}</h1>
-    <p class="highlight">...I offer a range of services to help you achieve your goals.</p>
-    <div class="services">
-      <div class="service-box">
-        <h2>Web Development</h2>
-        <p>Building responsive and dynamic websites using the latest technologies to ensure a seamless user experience across all devices.</p>
+  <main>
+    <section>
+      <div class="container hero">
+        <div class="hero-copy">
+          <div class="hero-meta">
+            <span><i class="fas fa-calendar-check"></i> Engagements from 2-week sprints</span>
+            <span><i class="fas fa-globe"></i> Available on-site in Addis or remote</span>
+          </div>
+          <h1 class="hero-title">Services engineered to launch <span>reliable platforms</span> faster.</h1>
+          <p class="hero-description">I partner with founders and product teams to design, build, and ship resilient back-end systems—backed by clear communication, thorough documentation, and measurable outcomes.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#service-packages">
+              <i class="fas fa-list-check"></i>
+              <span>Explore packages</span>
+            </a>
+            <a class="btn-secondary" href="index.html#contact">
+              <i class="fas fa-handshake"></i>
+              <span>Book a discovery call</span>
+            </a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h2>What to expect</h2>
+          <ul class="bullet-list">
+            <li>Status updates twice per week with clear next steps.</li>
+            <li>Production-ready code paired with automated tests and documentation.</li>
+            <li>Post-launch support window to measure success and triage improvements.</li>
+            <li>Transfer of knowledge so your team can continue iterating confidently.</li>
+          </ul>
+        </aside>
       </div>
-      <div class="service-box">
-        <h2>API Development</h2>
-        <p>Creating robust and scalable APIs to ensure seamless communication between different parts of your application.</p>
+    </section>
+
+    <section id="service-packages">
+      <div class="container">
+        <div class="section-heading">Service menu</div>
+        <h2 class="section-title">Choose the collaboration that fits</h2>
+        <p class="section-subtitle">Each package can be tailored to your stage—ideation, build, or optimization.</p>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-meta"><i class="fas fa-database"></i> Back-End & API Foundations</div>
+            <h3>Design resilient services</h3>
+            <p>Architect, implement, and document scalable APIs with robust authentication, testing, and monitoring.</p>
+            <ul>
+              <li>Contract-first API design and data modeling.</li>
+              <li>CI/CD setup with automated testing pipelines.</li>
+              <li>Observability dashboards for performance and errors.</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <div class="service-meta"><i class="fas fa-credit-card"></i> Payments & Fintech</div>
+            <h3>Integrate with confidence</h3>
+            <p>Embed payment providers like Chapa and Stripe with full webhook auditing, reporting, and compliance readiness.</p>
+            <ul>
+              <li>Webhook ingestion and replay tooling.</li>
+              <li>Fraud and settlement anomaly alerts.</li>
+              <li>Ledger reconciliation and reporting exports.</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <div class="service-meta"><i class="fas fa-robot"></i> Data Automation</div>
+            <h3>Scrape, enrich, and deliver data</h3>
+            <p>Build resilient scraping pipelines and automation scripts that adapt to schema changes and rate limits.</p>
+            <ul>
+              <li>Proxy rotation, throttling, and failure recovery.</li>
+              <li>Normalization and enrichment workflows.</li>
+              <li>Delivery pipelines to dashboards or APIs.</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <div class="service-meta"><i class="fas fa-universal-access"></i> Inclusive Platforms</div>
+            <h3>Accessibility-first experiences</h3>
+            <p>Translate content into Ethiopian Sign Language or build adaptable UX flows that welcome diverse audiences.</p>
+            <ul>
+              <li>Content pipeline to EthSL/ASL media libraries.</li>
+              <li>Accessibility audits with actionable fixes.</li>
+              <li>Developer training and documentation.</li>
+            </ul>
+          </article>
+        </div>
       </div>
-      <div class="service-box">
-        <h2>Database Management</h2>
-        <p>Designing, implementing, and maintaining efficient databases to store and manage your data securely and effectively.</p>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">Playbook</div>
+        <h2 class="section-title">How engagements run</h2>
+        <p class="section-subtitle">A collaborative flow designed to keep momentum high and surprises low.</p>
+        <div class="playbook-grid">
+          <article class="playbook-card">
+            <span>Step 1</span>
+            <h3>Scope & alignment workshop</h3>
+            <p>Define success metrics, dependencies, timeline, and critical integrations. Leave with an execution roadmap.</p>
+          </article>
+          <article class="playbook-card">
+            <span>Step 2</span>
+            <h3>Architecture sprint</h3>
+            <p>Produce diagrams, API contracts, and technical decisions. Validate with stakeholders before coding begins.</p>
+          </article>
+          <article class="playbook-card">
+            <span>Step 3</span>
+            <h3>Implementation & QA</h3>
+            <p>Ship features iteratively with code reviews, automated tests, and release notes. Maintain transparent progress.</p>
+          </article>
+          <article class="playbook-card">
+            <span>Step 4</span>
+            <h3>Launch & knowledge transfer</h3>
+            <p>Support deployment, create runbooks, and train your team. Monitor metrics and plan the next iteration.</p>
+          </article>
+        </div>
       </div>
-    </div>
-    <br>
-    <br>
-    <div class="skills">
-      <div class="skill-box">
-        <i class="fab fa-html5"></i>
-        <p>HTML5</p>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">Toolbox</div>
+        <h2 class="section-title">Technologies I rely on</h2>
+        <p class="section-subtitle">Mix and match stacks to fit your product goals without compromising performance or security.</p>
+        <div class="skills-grid">
+          <article class="skill-column">
+            <h3>Languages</h3>
+            <div class="chip-group">
+              <span class="chip">JavaScript</span>
+              <span class="chip">Go</span>
+              <span class="chip">Java</span>
+              <span class="chip">C++</span>
+            </div>
+          </article>
+          <article class="skill-column">
+            <h3>Frameworks</h3>
+            <div class="chip-group">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">Gin</span>
+              <span class="chip">Spring Boot</span>
+              <span class="chip">Django</span>
+            </div>
+          </article>
+          <article class="skill-column">
+            <h3>Data & DevOps</h3>
+            <div class="chip-group">
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">GitOps</span>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="skill-box">
-        <i class="fab fa-css3-alt"></i>
-        <p>CSS3</p>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-container">
+        <div class="contact-details">
+          <div class="section-heading">Let’s collaborate</div>
+          <h2 class="section-title">Ready for a project handoff?</h2>
+          <p class="section-subtitle">Share a challenge and I’ll respond with next steps, timeline options, and pricing within 24 hours.</p>
+          <ul class="contact-list">
+            <li><i class="fas fa-phone"></i> <a href="tel:+251915998576">+251 915 998 576</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:adamsvillage326@gmail.com">adamsvillage326@gmail.com</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:adamsvillage326@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="c892d0bf-391c-4457-a3ad-d3367b9ca424">
+          <label for="services-name">Name</label>
+          <input id="services-name" name="name" type="text" placeholder="Your name" required>
+          <label for="services-email">Email</label>
+          <input id="services-email" name="email" type="email" placeholder="you@example.com" required>
+          <label for="services-message">Project overview</label>
+          <textarea id="services-message" name="message" placeholder="Give me context so we can hit the ground running" required></textarea>
+          <button class="btn" type="submit">Send inquiry</button>
+        </form>
       </div>
-      <div class="skill-box">
-        <i class="fab fa-js"></i>
-        <p>JavaScript</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-java"></i>
-        <p>Java</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-node-js"></i>
-        <p>Node.js</p>
-      </div>
-      <div class="skill-box">
-        <i class="fas fa-server"></i>
-        <p>Express.js</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-docker"></i>
-        <p>Docker</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-linux"></i>
-        <p>Linux</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-git-alt"></i>
-        <p>Git</p>
-      </div>
-    </div>
-  </div>
-  <div class="contact-container">
-    <h2 class="title">{✣}</h2>
-    <h1 class="contact-title">&lt;contact_me&gt;</h1>
-    <p class="description">
-      ...Let's Chat! I'm here to help you with your project.
-    </p>
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-      <input type="hidden" name="access_key" value="c892d0bf-391c-4457-a3ad-d3367b9ca424">
-      
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-      
-      <button type="submit">Send</button>
-  </form>
-  </div>
+    </section>
+  </main>
   <footer>
-    <div class="left">
-      <a href="home.html">_home</a>
-      <a href="about.html">_about</a>
-      <a href="services.html">_services</a>
-      <a href="Resume.pdf">_resume</a>
-    </div>
-    <div class="center">
-      <a href="https://t.me/Terminaltroll"><i class="fab fa-telegram-plane"></i></a>
-      <a href="https://www.instagram.com/eliyanan52/"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:adamsvillage326@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="right">
-      Copyright @ 2025 Web Developer Portfolio
+    <div class="container">
+      <p>© <span id="services-year"></span> Eliyanan Belay. Empowering teams with reliable back-end systems.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="origin.html">Origin</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('services-year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>

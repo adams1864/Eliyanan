@@ -17,13 +17,14 @@ if (savedDarkMode === 'true') {
 
 // Show More Projects
 const showMoreButton = document.getElementById('show-more');
-const projectCards = document.querySelectorAll('.project-card');
 
 if (showMoreButton) {
   showMoreButton.addEventListener('click', () => {
-    projectCards.forEach((card) => {
-      card.style.display = 'block';
-    });
+    document.querySelectorAll('.portfolio-item.hidden, .portfolio-item[style*="display: none"]')
+      .forEach((item) => {
+        item.classList.remove('hidden');
+        item.style.removeProperty('display');
+      });
     showMoreButton.style.display = 'none';
   });
 }
