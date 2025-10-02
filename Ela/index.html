@@ -31,7 +31,8 @@
                 <div class="nav-actions">
                     <a class="btn-secondary" href="Resume.pdf" target="_blank" rel="noopener">Download CV</a>
                     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
-                        <i class="fas fa-circle-half-stroke"></i>
+                        <span class="visually-hidden">Toggle theme</span>
+                        <span class="theme-toggle__icon" aria-hidden="true">☾</span>
                     </button>
                 </div>
             </nav>
@@ -339,6 +340,29 @@
                             <span class="tag">PostgreSQL</span>
                         </div>
                     </article>
+                    <article class="project-entry portfolio-item" data-category="backend">
+                        <header class="project-entry__header">
+                            <div class="project-entry__title">
+                                <span class="project-label">Payments</span>
+                                <h3 class="project-title">YagoutPay Gateway Integration</h3>
+                            </div>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2025</span>
+                                <span><i class="fas fa-globe"></i> YagoutPay</span>
+                            </div>
+                        </header>
+                        <p class="project-summary">Gateway integration that encrypts checkout payloads, validates webhooks, and keeps settlements on schedule.</p>
+                        <ul class="project-insights">
+                            <li>Rolled out AES-256 request signing with key rotation, nonce tracking, and clock-skew protection.</li>
+                            <li>Delivered webhook and settlement workers with signature verification, retries, and ops alerts.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Payments</span>
+                            <span class="tag">Webhooks</span>
+                            <span class="tag">Encryption</span>
+                        </div>
+                    </article>
                     <article class="project-entry portfolio-item hidden" data-category="fullstack">
                         <header class="project-entry__header">
                             <div class="project-entry__title">
@@ -458,9 +482,9 @@
                         <li><i class="fab fa-github"></i> <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
                     </ul>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="mailto:adamsvillage326@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" data-label="in"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" data-label="gh"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        <a href="mailto:adamsvillage326@gmail.com" aria-label="Email" data-label="@"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="post">

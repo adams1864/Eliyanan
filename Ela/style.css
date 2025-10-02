@@ -3,6 +3,7 @@
   --surface: #ffffff;
   --surface-alt: #eef2fb;
   --text: #1c2533;
+  --text-primary: #101c36;
   --muted: #5a6573;
   --accent: #2563eb;
   --accent-dark: #1d4ed8;
@@ -19,6 +20,7 @@ body.dark-mode {
   --surface: #101c36;
   --surface-alt: #1a2642;
   --text: #e2e8f0;
+  --text-primary: #ffffff;
   --muted: #94a3b8;
   --accent: #60a5fa;
   --accent-dark: #3b82f6;
@@ -39,6 +41,18 @@ body {
   line-height: 1.65;
   transition: background 0.4s ease, color 0.4s ease;
   min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 a {
@@ -191,8 +205,20 @@ main {
   box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
 }
 
+.theme-toggle__icon {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .theme-toggle__icon {
+  color: #ffffff;
+}
+
 section {
   padding: clamp(2.75rem, 8vw, 5.5rem) 0;
+  scroll-margin-top: clamp(70px, 12vw, 110px);
 }
 
 .section-heading {
@@ -774,19 +800,55 @@ section {
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(37, 99, 235, 0.18);
-  display: grid;
-  place-items: center;
-  color: var(--accent);
-  transition: var(--transition);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  transition: all 0.25s ease;
+}
+
+.social-links a::before {
+  content: attr(data-label);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+body.dark-mode .social-links a {
+  border-color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .social-links a:hover {
   background: var(--accent);
   color: #fff;
+}
+
+.social-links a i {
+  display: none;
+  color: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+body.fontawesome-ready .social-links a::before {
+  content: '';
+  display: none;
+}
+
+body.fontawesome-ready .social-links a i {
+  display: inline-flex;
+}
+
+body.dark-mode .social-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 
 .contact-form {

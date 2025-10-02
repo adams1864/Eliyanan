@@ -1,19 +1,68 @@
 
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
+const themeToggleIcon = themeToggle?.querySelector('.theme-toggle__icon');
+
+const syncThemeIcon = () => {
+  if (!themeToggleIcon) return;
+  themeToggleIcon.textContent = document.body.classList.contains('dark-mode') ? '☀' : '☾';
+};
+
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const isDarkMode = document.body.classList.contains('dark-mode');
     localStorage.setItem('dark-mode', isDarkMode);
+    syncThemeIcon();
   });
 }
 
-// Check for saved dark mode preference
+// Check for saved dark mode preference or OS preference
 const savedDarkMode = localStorage.getItem('dark-mode');
-if (savedDarkMode === 'true') {
+const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedDarkMode === 'true' || (savedDarkMode === null && prefersDarkMode)) {
   document.body.classList.add('dark-mode');
 }
+
+if (savedDarkMode === null && window.matchMedia) {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    if (localStorage.getItem('dark-mode') !== null) return;
+    document.body.classList.toggle('dark-mode', event.matches);
+    syncThemeIcon();
+  });
+}
+
+syncThemeIcon();
+
+// Font Awesome fallback handling
+const enableFontAwesomeIfReady = () => {
+  if (!('fonts' in document)) {
+    document.body.classList.add('fontawesome-ready');
+    return;
+  }
+
+  const markIfLoaded = () => {
+    const hasSolid = document.fonts.check('1em "Font Awesome 6 Free"');
+    const hasBrands = document.fonts.check('1em "Font Awesome 6 Brands"');
+    if (hasSolid || hasBrands) {
+      document.body.classList.add('fontawesome-ready');
+    }
+  };
+
+  markIfLoaded();
+
+  document.fonts.ready.then(() => {
+    markIfLoaded();
+    if (!document.body.classList.contains('fontawesome-ready')) {
+      setTimeout(markIfLoaded, 400);
+    }
+  });
+
+  setTimeout(markIfLoaded, 2500);
+};
+
+enableFontAwesomeIfReady();
 
 // Show More Projects
 const showMoreButton = document.getElementById('show-more');
