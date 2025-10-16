@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Utopia Organic Fertilizer landing preview</title>
+  <desc id="desc">Hero section showcasing Utopia Organic Fertilizer Production Company with navigation, lush landscape illustration, and call to action.</desc>
+  <defs>
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2f1" />
+      <stop offset="100%" stop-color="#bbf7d0" />
+    </linearGradient>
+    <linearGradient id="hill-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f9d58" />
+      <stop offset="100%" stop-color="#0a7a3a" />
+    </linearGradient>
+    <linearGradient id="cta-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="520" fill="#ffffff" />
+  <rect width="960" height="360" fill="url(#sky-grad)" />
+  <path d="M0 300c90-40 180-48 270-18 120 40 260 42 440-40 150-70 250-40 250-40v318H0z" fill="#064e3b" opacity="0.65" />
+  <path d="M0 330c120-60 240-66 370-18 170 62 330 42 490-26v234H0z" fill="url(#hill-grad)" opacity="0.9" />
+  <g transform="translate(60 60)" font-family="'Poppins','Segoe UI',sans-serif">
+    <text x="0" y="40" font-size="34" font-weight="700" fill="#064e3b">UOF</text>
+    <text x="0" y="66" font-size="16" fill="#047857">Utopia Organic Fertilizer</text>
+  </g>
+  <g transform="translate(240 54)" fill="#047857" font-family="'Poppins','Segoe UI',sans-serif" font-size="20">
+    <text x="0" y="28">Home</text>
+    <text x="86" y="28">About</text>
+    <text x="168" y="28">Products</text>
+    <text x="284" y="28">Impact</text>
+    <text x="376" y="28">Contact</text>
+  </g>
+  <rect x="736" y="46" width="162" height="48" rx="24" fill="#047857" opacity="0.85" />
+  <text x="764" y="76" font-size="18" font-family="'Poppins','Segoe UI',sans-serif" fill="#f0fdf4" font-weight="600">Request Proposal</text>
+  <g transform="translate(120 180)">
+    <text x="0" y="0" font-size="20" font-family="'Poppins','Segoe UI',sans-serif" fill="#047857" font-weight="600">Utopia Organic Fertilizer Production Company</text>
+    <text x="0" y="38" font-size="58" font-family="'Poppins','Segoe UI',sans-serif" fill="#064e3b" font-weight="700">Fashioning Paradise Ethiopia</text>
+    <text x="0" y="92" font-size="32" font-family="'Poppins','Segoe UI',sans-serif" fill="#0f9d58" font-weight="700">through Organic Soil Revival</text>
+    <text x="0" y="128" font-size="20" font-family="'Poppins','Segoe UI',sans-serif" fill="#065f46">Restoring soil health, food security, and environmental balance with</text>
+    <text x="0" y="156" font-size="20" font-family="'Poppins','Segoe UI',sans-serif" fill="#065f46">100% organic, locally produced NPKC fertilizers.</text>
+  </g>
+  <rect x="120" y="360" width="196" height="58" rx="29" fill="url(#cta-grad)" />
+  <text x="156" y="398" font-size="20" font-family="'Poppins','Segoe UI',sans-serif" fill="#f0fdf4" font-weight="600">Explore Fertilizers</text>
+  <g transform="translate(520 220)">
+    <ellipse cx="160" cy="180" rx="160" ry="60" fill="#022c22" opacity="0.45" />
+    <path d="M40 160c40-72 92-132 180-132 88 0 130 48 180 128l-32 12c-36-54-74-84-132-84-56 0-106 28-140 88z" fill="#16a34a" opacity="0.85" />
+    <path d="M80 128c24-44 64-76 124-76 60 0 100 28 140 78-30 8-58 18-86 34-30 18-68 30-120 16-28-8-48-26-58-52z" fill="#4ade80" opacity="0.88" />
+    <path d="M150 82c16-22 42-36 76-36s62 14 78 36c-18 12-38 20-64 26-24 6-50 4-90-26z" fill="#bbf7d0" opacity="0.9" />
+  </g>
+</svg>

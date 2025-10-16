@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Shortly landing page preview</title>
+  <desc id="desc">Hero section of the Shortly URL shortening application with navigation, headline, supporting text, and illustration of a person at a desk.</desc>
+  <defs>
+    <linearGradient id="bg-wave" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#eef2ff" />
+      <stop offset="100%" stop-color="#e6f2ff" />
+    </linearGradient>
+    <linearGradient id="desk-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#13d8d2" />
+      <stop offset="100%" stop-color="#0da4d3" />
+    </linearGradient>
+    <linearGradient id="chair-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ca5c2" />
+      <stop offset="100%" stop-color="#047c9c" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="520" fill="#ffffff" />
+  <path d="M520 80c120-40 220-10 320 24v296c-170 70-330 76-480 28-150-48-280-44-360-6V144c160-56 270-26 440 36 80 30 180 42 280-20z" fill="url(#bg-wave)" opacity="0.55" />
+  <!-- Navigation -->
+  <g fill="#1f2a49" font-family="'Poppins', 'Segoe UI', sans-serif">
+    <text x="60" y="72" font-size="32" font-weight="700">Shortly</text>
+    <text x="250" y="72" font-size="18" fill="#7b849e">Features</text>
+    <text x="350" y="72" font-size="18" fill="#7b849e">Pricing</text>
+    <text x="430" y="72" font-size="18" fill="#7b849e">Resources</text>
+  </g>
+  <rect x="780" y="46" width="140" height="44" rx="22" fill="#25d7d0" />
+  <text x="817" y="74" font-size="18" font-family="'Poppins', 'Segoe UI', sans-serif" fill="#ffffff" font-weight="600">Sign Up</text>
+  <text x="710" y="74" font-size="18" font-family="'Poppins', 'Segoe UI', sans-serif" fill="#7b849e">Login</text>
+  <!-- Hero copy -->
+  <g font-family="'Poppins', 'Segoe UI', sans-serif" fill="#1f2a49">
+    <text x="60" y="172" font-size="64" font-weight="700">More than just</text>
+    <text x="60" y="232" font-size="64" font-weight="700">shorter links</text>
+  </g>
+  <text x="60" y="280" font-size="22" font-family="'Poppins', 'Segoe UI', sans-serif" fill="#7b849e">
+    Build your brand’s recognition and get detailed insights
+  </text>
+  <text x="60" y="308" font-size="22" font-family="'Poppins', 'Segoe UI', sans-serif" fill="#7b849e">
+    on how your links are performing.
+  </text>
+  <rect x="60" y="334" width="168" height="62" rx="31" fill="#25d7d0" />
+  <text x="88" y="374" font-size="22" font-family="'Poppins', 'Segoe UI', sans-serif" fill="#ffffff" font-weight="600">Get Started</text>
+  <!-- Illustration desk -->
+  <g transform="translate(520 150)">
+    <rect x="0" y="120" width="360" height="28" rx="14" fill="#0ca5c2" opacity="0.45" />
+    <path d="M0 40c40-14 80-20 140-12l120 18c40 6 72 18 100 40v96h-40v-64c0-14-12-24-28-24H96c-20 0-36 14-36 32v56H0z" fill="url(#desk-grad)" />
+    <rect x="210" y="-16" width="120" height="80" rx="14" fill="#006d94" opacity="0.42" />
+    <rect x="240" y="-26" width="18" height="120" rx="9" fill="#0d4a68" />
+    <rect x="126" y="20" width="60" height="120" rx="12" fill="url(#chair-grad)" />
+    <path d="M96 18c-8 30-12 66-12 108l-44-4c0-28 4-58 12-88z" fill="#2197a7" />
+    <circle cx="92" cy="-12" r="34" fill="#523a63" />
+    <path d="M86-8c28-18 54-18 66 10 10 22-10 46-36 42-18-2-32-20-30-52z" fill="#f6d7cb" />
+    <path d="M60 72c32-26 76-30 124-12l-12 64-68-16-24 60-44-12z" fill="#1eb8b3" />
+    <rect x="54" y="166" width="94" height="16" rx="8" fill="#0d4a68" />
+    <rect x="0" y="186" width="40" height="18" rx="9" fill="#0d4a68" />
+    <rect x="106" y="186" width="40" height="18" rx="9" fill="#0d4a68" />
+    <rect x="54" y="102" width="64" height="18" rx="9" fill="#f6d7cb" />
+    <path d="M218 10h72c6 0 10 4 10 10v18c0 6-4 10-10 10h-72c-6 0-10-4-10-10V20c0-6 4-10 10-10z" fill="#0d4a68" />
+  </g>
+</svg>

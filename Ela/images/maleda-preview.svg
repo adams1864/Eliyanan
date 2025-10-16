@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Maleda Printing hero preview</title>
+  <desc id="desc">Landing page hero for Maleda Printing showing mountain silhouettes against a sunrise, navigation pill, and headline text.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00263f" />
+      <stop offset="35%" stop-color="#09304c" />
+      <stop offset="65%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="40%" r="42%">
+      <stop offset="0%" stop-color="#fee569" />
+      <stop offset="85%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </radialGradient>
+    <linearGradient id="btn-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="520" fill="#0f172a" />
+  <rect width="960" height="520" fill="url(#sky)" opacity="0.85" />
+  <path d="M0 340c80-30 160-28 248 4 120 44 248 58 436-18 94-38 182-40 276-6v200H0z" fill="#020617" opacity="0.78" />
+  <path d="M0 312c70-28 140-26 220 6 130 52 272 66 456-12 86-36 170-36 244-6v220H0z" fill="#1e0f16" opacity="0.85" />
+  <circle cx="640" cy="230" r="130" fill="url(#sun)" />
+  <path d="M420 286c60-36 100-52 150-38 58 16 110 24 178-14 46-26 104-30 212 18v92H420z" fill="#8b0000" opacity="0.65" />
+  <path d="M420 300h520v56H420z" fill="#1f2937" opacity="0.6" />
+  <text x="62" y="100" font-size="46" font-family="'Poppins','Segoe UI',sans-serif" fill="#facc15" font-weight="700">Maleda</text>
+  <text x="62" y="132" font-size="18" font-family="'Poppins','Segoe UI',sans-serif" fill="#facc15">Printing and Design</text>
+  <g transform="translate(310 40)">
+    <rect width="360" height="88" rx="44" fill="#facc15" opacity="0.92" />
+    <g fill="#7c2d12" font-family="'Poppins','Segoe UI',sans-serif" font-size="24">
+      <text x="40" y="52" font-weight="700">Home</text>
+      <text x="128" y="52">About</text>
+      <text x="208" y="52">Services</text>
+      <text x="300" y="52">Portfolio</text>
+    </g>
+  </g>
+  <text x="336" y="96" font-size="24" font-family="'Poppins','Segoe UI',sans-serif" fill="#fcd34d">Contact</text>
+  <g font-family="'Poppins','Segoe UI',sans-serif">
+    <text x="110" y="350" font-size="58" font-weight="700" fill="#ffffff">We are the</text>
+    <text x="454" y="350" font-size="58" font-weight="700" fill="#facc15">Rising!</text>
+    <text x="110" y="392" font-size="22" fill="#cbd5f5" opacity="0.9">Your trusted partner for all printing needs. From business cards to large</text>
+    <text x="110" y="422" font-size="22" fill="#cbd5f5" opacity="0.9">format banners, we deliver quality and service that stands out.</text>
+  </g>
+  <rect x="110" y="440" width="188" height="58" rx="29" fill="url(#btn-grad)" />
+  <text x="140" y="476" font-size="20" font-family="'Poppins','Segoe UI',sans-serif" fill="#1e1b4b" font-weight="600">Explore Services</text>
+  <rect x="310" y="444" width="178" height="52" rx="26" fill="transparent" stroke="#facc15" stroke-width="2" opacity="0.85" />
+  <text x="342" y="476" font-size="20" font-family="'Poppins','Segoe UI',sans-serif" fill="#facc15" font-weight="600">Our Products</text>
+</svg>
